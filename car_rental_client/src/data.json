@@ -1,0 +1,148 @@
+
+ [  {
+        "id": "1",
+        "pic": [
+            "https://cdn.pixabay.com/photo/2016/02/13/13/11/cuba-1197800__340.jpg",
+            "https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278__340.jpg",
+            "https://cdn.pixabay.com/photo/2014/06/04/16/36/car-repair-362150__340.jpg",
+            "https://cdn.pixabay.com/photo/2016/01/19/17/57/car-1149997__340.jpg"
+        ],
+        "carName": "mazda",
+        "model": "3",
+        "price": "100",
+        "year": "2006",
+        "featured": true
+
+    },
+    {
+        "id": "2",
+        "pic": ["https://cdn.pixabay.com/photo/2016/03/11/02/08/speed-1249610__340.jpg"],
+        "carName": "fiat",
+        "model": "500",
+        "price": "200",
+        "year": "2006",
+        "featured": true
+
+    }, 
+    {
+        "id": "3",
+        "pic": ["https://cdn.pixabay.com/photo/2020/07/19/09/55/man-5419522__340.jpg"],
+        "carName": "lexus",
+        "model": "12",
+        "price": "300",
+        "year": "2003",
+        "featured": true
+
+    },
+    {
+        "id":"4",
+        "pic":["https://cdn.pixabay.com/photo/2017/12/28/23/41/car-3046424__340.jpg"],
+        "carName":"mercedes",
+        "model": "a10",
+        "price": "400",
+        "year": "2001",
+        "featured": false
+
+    },
+    {
+        "id":"5",
+        "pic":["https://cdn.pixabay.com/photo/2016/11/23/17/24/automobile-1853936__340.jpg"],
+        "carName":"hyundy",
+        "model": "elantra",
+        "price": "500",
+        "year": "2007",
+        "featured": false
+
+    },
+    {
+        "id":"6",
+        "pic":["https://cdn.pixabay.com/photo/2020/07/15/13/12/lotus-5407670__340.jpg"],
+        "carName":"golf",
+        "model": "xr",
+        "price": "600",
+        "year": "2005",
+        "featured": false
+
+    },
+    {
+        "id":"7",
+        "pic":["https://cdn.pixabay.com/photo/2015/03/26/09/46/car-690275__340.jpg"],
+        "carName":"skoda",
+        "model": "supreb",
+        "price": "700",
+        "year": "1990",
+        "featured": false
+
+    },
+    {
+        "id":"8",
+        "pic":["https://cdn.pixabay.com/photo/2012/11/02/13/02/ford-63930__340.jpg"],
+        "carName":"lada",
+        "model": "12",
+        "price": "800",
+        "year": "2019",
+        "featured": false
+
+    },
+    {
+        "id":"9",
+        "pic":["https://cdn.pixabay.com/photo/2015/10/12/15/05/car-984159__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "2018",
+        "featured": false
+
+    },
+    {
+        "id":"10",
+        "pic":["https://cdn.pixabay.com/photo/2014/10/22/17/22/ford-498244__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "2017",
+        "featured": false
+
+    },
+    {
+        "id":"11",
+        "pic":["https://cdn.pixabay.com/photo/2017/04/04/22/27/trolley-2203329__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "2014",
+        "featured": false
+
+    },
+    {
+        "id":"12",
+        "pic":["https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "2010",
+        "featured": false
+
+    },
+    {
+        "id":"13",
+        "pic":["https://cdn.pixabay.com/photo/2018/07/01/20/01/mercedes-3510327__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "2000",
+        "featured": false
+
+    },
+    {
+        "id":"14",
+        "pic":["https://cdn.pixabay.com/photo/2018/07/01/20/01/mercedes-3510327__340.jpg"],
+        "carName":"subaru",
+        "model": "b4",
+        "price": "900",
+        "year": "1997",
+        "featured": false
+
+    }
+
+]

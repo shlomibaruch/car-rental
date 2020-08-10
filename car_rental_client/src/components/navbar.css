@@ -1,0 +1,202 @@
+.defaultHero,
+.carHero {
+  min-height: calc(100vh - 66px);
+  background: url("https://cdn.pixabay.com/photo/2017/03/20/04/57/truck-2158284__340.png") center/cover no-repeat;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carHero {
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/22/23/44/buildings-1851246__340.jpg");
+  min-height: 80vh;
+  margin: 0;
+}
+
+.errorCarHero {
+  background: url("https://cdn.pixabay.com/photo/2017/03/09/12/31/error-2129569__340.jpg") center/cover no-repeat;
+  min-height: calc(100vh - 66px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* banner */
+.banner {
+  width: 60%;
+  height: calc(60vh - 100px);
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.52);
+  color: wheat;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacting);
+}
+
+.banner div {
+  width: 20vw;
+  height: 5px;
+  background-color: white;
+  margin: 1.7rem auto;
+}
+
+.services .section_title {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(12, 12, 12, 0.787);
+}
+
+.services .section_title div {
+  width: 10vw;
+  height: 5px;
+  background-color: black;
+  margin: 1.7rem auto;
+}
+
+.services_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: inherit;
+  background-color: rgba(12, 12, 12, 0.787);
+}
+
+.services_center .services_artical {
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services_center .services_artical span {
+  color: #523808;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .services_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services_artical {
+    border: 1px solid black;
+  }
+}
+
+.cardContainer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #2f1717;
+}
+
+.car_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.car_data {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 1 / 5 / 4;
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
+}
+
+.car_info {
+  height: 10vh;
+  background-color: red;
+}
+
+.featured_room_center {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.img_container {
+  background-color: cadetblue;
+}
+
+.price {
+  background-color: #4e4c4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.price h4 h5 {
+  margin: 0;
+}
+/*# sourceMappingURL=navbar.css.map */
