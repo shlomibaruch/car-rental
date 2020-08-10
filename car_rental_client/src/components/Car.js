@@ -3,7 +3,7 @@ import '../components/navbar.css'
 import { useHistory } from 'react-router-dom';
 export default function Car({ car }) {
     const history = useHistory();
-    const { id, carName, model, price, pic } = car;
+    const { id, carName, model, price, pic, year } = car;
     const defaultImg = "https://cdn.pixabay.com/photo/2013/07/13/11/36/volkswagen-158463__340.png"
     return (
         <article className='cars-container'>
@@ -13,8 +13,9 @@ export default function Car({ car }) {
 
                     <h4>{carName + " " + model}</h4>
                     <h5>${price}</h5>
+                    <h5>{year}</h5>
 
-                    <button onClick={() => { history.push(`/cars/${id}`) }}>click</button>
+                    <button onClick={() => { history.push(`/cars/${id}`) }}>More</button>
                 </div>
             </div>
         </article>

@@ -11,8 +11,7 @@ export default class FeaturedCars extends Component {
     render() {
 
         let { loading, featuredCars: cars } = this.context;
-        console.log(cars, loading);
-        if (cars === undefined) {
+        if (!cars) {
 
         } else {
             cars = cars.map(car => {

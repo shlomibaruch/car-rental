@@ -1,16 +1,21 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Hero from '../components/Hero';
 import Bunner from '../components/Bunner';
 import '../components/navbar.css';
 import CarsDisplay from '../components/CarsDisplay';
+import {CarContext} from '../context/context'
+import CarsFilter from '../components/carsFilter/CarFilter'
 import Title from '../components/Title';
-
+import CarsComponent from '../components/carsFilter/CarsComponent';
 export default function Cars() {
+    const context = useContext(CarContext);
+    const { cars } = context;
+
     return (
         <div className='car_container'>
             <Hero hero="carHero">
-                <Bunner title='We have the best cars' subtite="Serch your dream car">
-                    <input type='text' placeholder='Search' />
+                <Bunner title='We have the best cars' subtite="Maybe your dream car is here">
+                    <CarsFilter cars={cars}/>
                 </Bunner>
 
 
@@ -19,7 +24,8 @@ export default function Cars() {
         <div style={{textAlign: 'center'}}>
         <Title title="All The Cars" />
         </div>
-        <CarsDisplay/>
+        {/* <CarsDisplay/> */}
+        <CarsComponent />
     
         </div>
     )

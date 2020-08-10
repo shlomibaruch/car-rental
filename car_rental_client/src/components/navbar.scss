@@ -23,8 +23,8 @@ margin-bottom: 5px;
 /* banner */
 
 .banner { 
-    width: 60%;
-    height: calc(60vh - 100px);
+    width: 90vw;
+    height: calc(90vh - 10px) max-content;
     display: inline-block;
     background: rgba(0, 0, 0, 0.52);
     color: wheat;
@@ -33,13 +33,51 @@ margin-bottom: 5px;
     text-transform: capitalize;
     letter-spacing:var(--mainSpacting) ;
     
-    div {
+    .banner-center {
         width: 20vw;
         height: 5px;
         background-color: white;
         margin: 1.7rem auto;
     }
 };
+@media screen and (max-width: 1000px) { 
+.banner {
+    width: 90vw;
+    height: 80vh ;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.52);
+    color: wheat;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing:var(--mainSpacting) ;
+
+    h1 {
+        font-size: 20px;
+    }
+  
+}
+}
+.carGalleryContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .description {
+        margin: 15px 25% 15px 25%;
+    }
+    .car-imgages,
+    .car-info {
+        width: 50%;
+    }
+    // min-height: min-content;
+    @media screen and (max-width: 1000px) { 
+        .bigImgGallery {
+            width:90%;
+            
+        }
+    }
+}
 .services .section_title { 
     height:30vh;
     display: flex;
@@ -92,7 +130,7 @@ margin-bottom: 5px;
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;  
-        background-color: rgb(47, 23, 23);        
+
         
     }
         .car_card {
@@ -108,6 +146,7 @@ margin-bottom: 5px;
             flex-direction: column;
             justify-content: center;
          margin: 15px;
+        box-shadow: 5px 10px;  
 
      
         }
@@ -123,15 +162,48 @@ margin-bottom: 5px;
              justify-content: space-evenly; 
               }
          .img_container {
-             background-color: cadetblue;
+             display: flex;
+              justify-content: center;
+            padding: 1rem;
+            flex-direction: column;
+
          }
               .price { 
-                  h4 h5 {
-                      margin: 0;
-                  }
-                  background-color: rgb(78, 76, 76);
+                  background-color: black;
+                  color: white;
                   display: flex;
+                  width: inherit;
                   justify-content: space-around;
+                  padding: 10px;
+        box-shadow: 5px 1px rgba(0, 0, 0, 0.596);  
+
+                  h4 h5 {
+                margin: 0;
+                  }
               }
          
+.filter-cars-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+    width: 100%;
+    .filrter-form {
+        display: inherit;
+        justify-content: inherit;
+        width: 50vw;
+        margin: 15px;
+        font-size: 20px;
+        
+        .form-group{ 
+            margin-left: 5%;
+        }
+        // input {
+        //     width: 50%;
+        // }
+        // select { 
+        //     width: 35%;
+        // }
+    }
+}
