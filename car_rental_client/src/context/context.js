@@ -19,7 +19,7 @@ class CarProvider extends Component {
     // get data 
 
     componentDidMount() {
-        let cars = this.formatData(carsData)
+        let cars = this.formatData(carsData);
         let featuredCars = cars.filter(car => car.featured === true)
 
         // maxPrice find the max price from the resulte ...
@@ -38,7 +38,7 @@ class CarProvider extends Component {
 
     formatData(items) {
         let tempItems = items.map(item => {
-            let id = item.id;
+            // let id = item.id;
             let img = item.pic.map(image => image);
 
             let car = { ...item, img };
@@ -54,7 +54,7 @@ class CarProvider extends Component {
 
     }
     handleChange = e => {
-        const target = e.target
+        // const target = e.target
         const name = e.target.name;
         const value = e.target.value;
         this.setState({
@@ -66,7 +66,7 @@ class CarProvider extends Component {
     };
 
     filterCars = () => {
-        let { cars, price, maxPrice, minPrice, carName, year} = this.state;
+        let { cars, price, carName, year} = this.state;
         let tepmCar = [...cars];
         if(carName !== 'all') {
             tepmCar = tepmCar.filter(car => car.carName === carName)
@@ -74,9 +74,9 @@ class CarProvider extends Component {
         if(year !== 1) {
             tepmCar = tepmCar.filter(car => car.year >= year)
         }
-        if(price >= minPrice) {
+        // if(price >= minPrice) {/
             tepmCar = tepmCar.filter(car => car.price >= price)
-        }
+        // }
         this.setState({
             sortsdCars: tepmCar
         })

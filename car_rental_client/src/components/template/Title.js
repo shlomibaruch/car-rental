@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/navbar.css';
+import '../css/navbar.css';
 export default function Title({title}) {
     return (
         <div className='section_title'>

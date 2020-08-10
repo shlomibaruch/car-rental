@@ -2,7 +2,6 @@
 .carHero {
   min-height: calc(100vh - 66px);
   background: url("https://cdn.pixabay.com/photo/2017/03/20/04/57/truck-2158284__340.png") center/cover no-repeat;
-  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,9 +36,9 @@
 /* banner */
 .banner {
   width: 90vw;
-  height: calc(90vh - 10px) -webkit-max-content;
-  height: calc(90vh - 10px) -moz-max-content;
-  height: calc(90vh - 10px) max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: inline-block;
   background: rgba(0, 0, 0, 0.52);
   color: wheat;
@@ -59,7 +58,7 @@
 @media screen and (max-width: 1000px) {
   .banner {
     width: 90vw;
-    height: 80vh;
+    height: 40vh;
     display: inline-block;
     background: rgba(0, 0, 0, 0.52);
     color: wheat;
@@ -67,14 +66,29 @@
     text-align: center;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacting);
+    font-size: 20px;
   }
   .banner h1 {
     font-size: 20px;
+  }
+  .banner .cardContainer {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
 
 .carGalleryContainer {
   width: 100%;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,10 +98,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.carGalleryContainer .description {
-  margin: 15px 25% 15px 25%;
 }
 
 .carGalleryContainer .car-imgages,
@@ -102,7 +112,7 @@
 }
 
 .services .section_title {
-  height: 30vh;
+  height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,6 +145,7 @@
           justify-content: space-evenly;
   background-color: inherit;
   background-color: rgba(12, 12, 12, 0.787);
+  height: 35vh;
 }
 
 .services_center .services_artical {
@@ -146,11 +157,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 30vw;
 }
 
 .services_center .services_artical span {
   color: #523808;
   font-size: 50px;
+}
+
+.services_center .services_artical p {
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -160,13 +176,35 @@
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .services_artical {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .services_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    overflow: hidden;
   }
   .services_artical {
-    border: 1px solid black;
+    font-size: 15px;
+    overflow: hidden;
+    margin: 5px;
   }
 }
 
@@ -178,8 +216,8 @@
           justify-content: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -263,7 +301,7 @@
   margin: 0;
 }
 
-.filter-cars-container {
+.filter-cars-container, .empty-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,17 +318,42 @@
   width: 100%;
 }
 
-.filter-cars-container .filrter-form {
+.filter-cars-container .filrter-form, .empty-search .filrter-form {
   display: inherit;
   -webkit-box-pack: inherit;
       -ms-flex-pack: inherit;
           justify-content: inherit;
-  width: 50vw;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  width: 90vw;
+  height: 15vh;
   margin: 15px;
   font-size: 20px;
 }
 
-.filter-cars-container .filrter-form .form-group {
+.filter-cars-container .filrter-form .form-group, .empty-search .filrter-form .form-group {
   margin-left: 5%;
+}
+
+.filter-cars-container .filrter-form select, .empty-search .filrter-form select {
+  width: 100%;
+}
+
+.homeBanner {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=navbar.css.map */

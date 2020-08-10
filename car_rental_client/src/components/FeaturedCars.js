@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { CarContext } from '../context/context';
 import Loading from './Loading';
-import Title from '../components/Title'
-import './navbar.css'
+import Title from '../components/template/Title'
+import './css/navbar.css'
 import Car from './Car';
 export default class FeaturedCars extends Component {
     static contextType = CarContext;
@@ -15,7 +15,6 @@ export default class FeaturedCars extends Component {
 
         } else {
             cars = cars.map(car => {
-                console.log(car.id);
                 return <Car key={car.id} car={car} />
             });
 
@@ -24,7 +23,9 @@ export default class FeaturedCars extends Component {
 
         return (
             <section className="featured_cars">
-                <div style={{ textAlign: 'center' }}><Title title="featured Cars" /></div>
+                <div style={{ textAlign: 'center' }}>
+                    <Title title="featured Cars" />
+                </div>
                 <div className='featured_room_center'>
                     {/* {cars} */}
                     {loading ? <Loading /> : cars}

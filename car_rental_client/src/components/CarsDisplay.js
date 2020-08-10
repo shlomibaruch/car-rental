@@ -38,3 +38,21 @@
 //         </div>
 //     )
 // }
+
+    //     <div className="cardContainer">
+    //     {currentCars.map((item, index) => {
+
+    //         return <div className='car_card' key={index}>
+    //             <div className="car_data">
+    //                 <img src={item.pic[0]} />
+    //                 <div className='car_info'></div>
+    //                 <button onClick={() => { history.push(`/cars/${item.id}`) }}>click</button>
+    //             </div>
+    //         </div>
+    //     })};
+    //     <Pagination
+    //         carPerPage={carsPerPage}
+    //         totalCars={cars.length}
+    //         paginate={paginate} />
+
+    // </div>

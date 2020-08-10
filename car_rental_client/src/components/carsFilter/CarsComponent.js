@@ -1,5 +1,5 @@
 import React from 'react'
-import CarFilter from '../carsFilter/CarFilter';
+// import CarFilter from '../carsFilter/CarFilter';
 import CarList from '../carsFilter/CarList';
 import { CarConsumer } from '../../context/context';
 import Loading from '../Loading';
@@ -11,13 +11,12 @@ export default function CarsComponent() {
             {
                 // the value comming from the context
                 (value) => {
-                    const { sortsdCars, loading, cars } = value;
+                    const { sortsdCars, loading } = value;
                     if (loading) {
                         return <Loading />;
                     };
 
                     return <div>
-                        {/* <CarFilter cars={cars} /> */}
                         <CarList cars={sortsdCars}/>
                     </div>
 

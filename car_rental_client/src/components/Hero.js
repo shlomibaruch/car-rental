@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/navbar.css'
+import '../components/css/navbar.css'
 export default function Hero({ children, hero }) {
     return (
         <header className={hero} >{ children }</header>

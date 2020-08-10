@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import { CarContext } from '../../context/context'
-import Title from '../Title';
-import '../../components/navbar.css';
+import Title from '../template/Title';
+import '../../components/css/navbar.css';
 export default function CarFilter({ cars }) {
 
     const context = useContext(CarContext);
-    const { handleChange, type, price, maxPrice, minPrice, carName, year } = context;
+    const { handleChange, price, maxPrice, minPrice, carName, year } = context;
 
     const getUniqueValue = (items, value) => {
-        return [... new Set(items.map(item => item[value]))]
+        return [...new Set(items.map(item => item[value]))]
     }
     let types = getUniqueValue(cars, "carName");
     types = ["all", ...types]
@@ -50,8 +50,8 @@ export default function CarFilter({ cars }) {
                 </div>
                 {/* choose price */}
                 <div className='form-group'>
-                    <label htmlFor='price'> Price</label>
-                    <input type='range' name='price' id='price' step='50' max={maxPrice} min={minPrice} onChange={handleChange} /> <span>car price $ {maxPrice}</span>
+                    <label htmlFor='price'> Price {price}</label><br/>
+                    <input type='range' value={price} name='price' id='price' step='100'  min={minPrice} max={maxPrice} onChange={handleChange} /> <span>car price $ {maxPrice}</span>
 
                 </div>
 

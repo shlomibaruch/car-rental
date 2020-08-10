@@ -1,18 +1,25 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Bunner from '../components/Bunner';
-import '../components/navbar.css';
+import Button from '@material-ui/core/Button'
+import Bunner from '../components/template/Bunner';
+import '../components/css/navbar.css';
 import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedCars from '../components/FeaturedCars';
+
 export default function Home() {
     return (
         <>
             <Hero>
-                <Bunner title="Helllllllllllllo" subtite="asdfasdgafgafhadhafh">
+                <Bunner title="Welcome" subtite="Here you can find the vehicle you were looking for all the time">
 
-                    <Link to='/cars'>go to cars</Link>
+                  <div className='homeBanner'>
+                  
+                  <Button variant="contained" size="large"><Link to='/cars'>go to cars</Link></Button>
+
+                  </div>
                 </Bunner>
+
             </Hero>
             <Services />
             <FeaturedCars />

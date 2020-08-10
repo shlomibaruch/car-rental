@@ -2,7 +2,7 @@
 .carHero {
     min-height: calc(100vh - 66px);
     background: url('https://cdn.pixabay.com/photo/2017/03/20/04/57/truck-2158284__340.png') center/cover no-repeat;
-margin-bottom: 5px;
+// margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ margin-bottom: 5px;
 
 .banner { 
     width: 90vw;
-    height: calc(90vh - 10px) max-content;
+    height: fit-content;
     display: inline-block;
     background: rgba(0, 0, 0, 0.52);
     color: wheat;
@@ -40,10 +40,11 @@ margin-bottom: 5px;
         margin: 1.7rem auto;
     }
 };
+
 @media screen and (max-width: 1000px) { 
 .banner {
     width: 90vw;
-    height: 80vh ;
+    height: 40vh ;
     display: inline-block;
     background: rgba(0, 0, 0, 0.52);
     color: wheat;
@@ -51,20 +52,29 @@ margin-bottom: 5px;
     text-align: center;
     text-transform: capitalize;
     letter-spacing:var(--mainSpacting) ;
+    font-size: 20px;
 
     h1 {
         font-size: 20px;
     }
-  
+    .cardContainer {
+        display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
+    }
 }
 }
 .carGalleryContainer {
     width: 100%;
+    height: 50vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .description {
-        margin: 15px 25% 15px 25%;
+        // margin: 15px 25% 15px 25%;
     }
     .car-imgages,
     .car-info {
@@ -76,10 +86,11 @@ margin-bottom: 5px;
             width:90%;
             
         }
+        
     }
 }
 .services .section_title { 
-    height:30vh;
+    height:20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,14 +111,20 @@ margin-bottom: 5px;
      justify-content: space-evenly;
      background-color: inherit;
     background-color: rgba(12, 12, 12, 0.787);
+    height: 35vh;
 
        .services_artical {
         display: inherit;
         flex-direction: column;
         align-items: center;
+        width: 30vw;
+
         span {
             color: rgb(82, 56, 8);
             font-size: 50px;
+        }
+        p {
+            text-align: center;
         }
        }
       
@@ -116,18 +133,33 @@ margin-bottom: 5px;
         .services_center {
             display: flex;
             justify-content: space-around;
-            flex-direction: column;
             
         }
         .services_artical{
-            border: 1px solid black;
+            font-size: 15px;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        .services_center {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            
+        }
+        .services_artical{
+            font-size: 15px;
+            overflow: hidden;
+            margin: 5px;
         }
       }
       .cardContainer { 
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;  
 
@@ -182,7 +214,7 @@ margin-bottom: 5px;
                   }
               }
          
-.filter-cars-container {
+.filter-cars-container,.empty-search {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,7 +224,9 @@ margin-bottom: 5px;
     .filrter-form {
         display: inherit;
         justify-content: inherit;
-        width: 50vw;
+        align-items: inherit;
+        width: 90vw;
+        height: 15vh;
         margin: 15px;
         font-size: 20px;
         
@@ -202,8 +236,16 @@ margin-bottom: 5px;
         // input {
         //     width: 50%;
         // }
-        // select { 
-        //     width: 35%;
-        // }
+        select { 
+            width: 100%;
+        }
     }
 }
+
+.homeBanner { 
+    height:50vh;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content:center
+    }

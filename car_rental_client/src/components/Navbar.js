@@ -1,14 +1,14 @@
-import React, { Component, useState } from 'react';
-import '../components/navbar.css'
-import { FaAlignRight } from 'react-icons/fa';
-import { Link , useHistory} from 'react-router-dom';
+import React from 'react';
+import '../components/css/navbar.css'
+// import { FaAlignRight } from 'react-icons/fa';
+import {useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/core/Menu';
+// import MenuIcon from '@material-ui/core/Menu';
 
 export default function Navbar() {
     const history = useHistory();
@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <nav className={classes.root}>
-            <AppBar position="static"style={{backgroundColor: 'black'}}>
+            <AppBar position="static" style={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" >
                         {/* <FaAlignRight /> */}
@@ -42,8 +42,8 @@ export default function Navbar() {
                     <Typography variant="h6" className={classes.title}>
                         Car Rental
                 </Typography>
-                    <Button  color="inherit" onClick={()=>{history.push('/')}}>Home</Button>
-                        <Button color="inherit" onClick={()=>{history.push('/cars')}}>Cars</Button>
+                    <Button color="inherit" onClick={() => { history.push('/') }}>Home</Button>
+                    <Button color="inherit" onClick={() => { history.push('/cars') }}>Cars</Button>
                 </Toolbar>
             </AppBar>
         </nav>

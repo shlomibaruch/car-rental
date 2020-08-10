@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Bunner from '../components/Bunner'
+import Bunner from '../components/template/Title'
 import { Link } from 'react-router-dom'
 
 export default function ErrorPage() {

@@ -1,11 +1,11 @@
 import React,{useContext} from 'react'
 import Hero from '../components/Hero';
-import Bunner from '../components/Bunner';
-import '../components/navbar.css';
-import CarsDisplay from '../components/CarsDisplay';
+import Bunner from '../components/template/Bunner';
+import '../components/css/navbar.css';
+// import CarsDisplay from '../components/CarsDisplay';
 import {CarContext} from '../context/context'
 import CarsFilter from '../components/carsFilter/CarFilter'
-import Title from '../components/Title';
+import Title from '../components/template/Title';
 import CarsComponent from '../components/carsFilter/CarsComponent';
 export default function Cars() {
     const context = useContext(CarContext);
@@ -24,7 +24,7 @@ export default function Cars() {
         <div style={{textAlign: 'center'}}>
         <Title title="All The Cars" />
         </div>
-        {/* <CarsDisplay/> */}
+
         <CarsComponent />
     
         </div>

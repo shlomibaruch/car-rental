@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import '../components/navbar.css';
+import '../components/css/navbar.css';
+import Button from '@material-ui/core/Button'
 import { FaCheck } from 'react-icons/fa'
-import Bunner from '../components/Bunner';
+import Bunner from '../components/template/Bunner';
 import { CarContext } from '../context/context'
 import { Link } from 'react-router-dom';
 import StyledHero from '../components/StyledHero';
@@ -40,21 +41,21 @@ export default class SingleCar extends Component {
                     <Bunner title={carName + " " + model}>
                         <div className='carGalleryContainer'>
                             <div className='car-imgages'>
-                                <img className='bigImgGallery' style={{ minHeight: '390px' }} src={pic[this.state.carGallery]} />
+                                <img className='bigImgGallery' style={{ minHeight: '390px' }} src={pic[this.state.carGallery]} alt='single-car' />
 
                                 <nav style={{ width: '100%', backgroundColor: 'rgba(0,0,0,0)' }}>
 
 
                                     {pic.map((p, i) => {
-                                        return <img key={i} style={{ margin: '2px', minHeight: '76px' }} width="10%" src={p} onClick={() => {
+                                        return <img key={i} alt='single-car' style={{ margin: '2px', minHeight: '76px' }} width="10%" src={p} onClick={() => {
                                             this.setState({ carGallery: i })
                                         }} />
                                     })}
                                 </nav>
                             </div>
                             <div className='car-info'>
-
-                                <h3>{featured ? <FaCheck /> : 'no'}</h3> {/* You need To add if the car new or not in the featured place... */}
+                                {/* You need To add if the car new or not in the featured place... */}
+                                {/* <h3>{featured ? <FaCheck /> : 'no'}</h3> */}
                                 <h2>Year</h2>
                                 <p>{year}</p>
                                 <h2>Price</h2>
@@ -64,7 +65,10 @@ export default class SingleCar extends Component {
 
 
                         </div>
-                    <button><Link to='/cars'>Back To Cars</Link></button>
+                        <Button variant="contained" size='small'>
+                            <Link to='/cars'>Back To Cars</Link>
+                        </Button>
+
                     </Bunner>
                 </StyledHero>
                 <div>

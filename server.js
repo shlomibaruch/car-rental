@@ -11,8 +11,8 @@ app.get('/cars',(req,res) => {
     console.log('cars');
 });
 
-app.get('/cars/search_car',(req,res) => {
-    const a = req.params.id;
+app.post('/cars/:search_car',(req,res) => {
+    let a = req.params.search_car;
     console.log(a);
 });
 app.listen(PORT,()=> {
