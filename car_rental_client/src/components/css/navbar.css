@@ -289,15 +289,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: inherit;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10px;
-  -webkit-box-shadow: 5px 1px rgba(0, 0, 0, 0.596);
-          box-shadow: 5px 1px rgba(0, 0, 0, 0.596);
 }
 
-.price h4 h5 {
+.price h4 h3 {
   margin: 0;
 }
 
@@ -355,5 +356,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.footer-container {
+  min-height: 15vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-container .footer-logo {
+  color: wheat;
+  float: right;
 }
 /*# sourceMappingURL=navbar.css.map */

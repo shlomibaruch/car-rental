@@ -14,9 +14,9 @@ export default function Car({ car }) {
                 <img src={pic[0] || defaultImg} alt="car img" />
                 <div className="price" >
 
-                    <h4>{carName + " " + model}</h4>
-                    <h5>${price}</h5>
-                    <h5>{year}</h5>
+                    <h2>{carName + " " + model}</h2>
+                    <h3>Price : ${price}</h3>
+                    <h3>Year : {year}</h3>
 
                     <Button variant="contained" size='small' onClick={() => {
                         let carID =  id;

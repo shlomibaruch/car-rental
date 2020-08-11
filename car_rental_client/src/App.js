@@ -6,6 +6,7 @@ import Cars from './pages/Cars';
 import SingleCar from './pages/SingleCar';
 import ErrorPage from './pages/ErrorPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route component={ErrorPage} />
 
       </Switch>
+      <Footer/>
     </BrowserRouter>
   );
 }

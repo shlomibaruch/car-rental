@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import Hero from '../components/Hero';
+import Hero from '../components/template/Hero';
 import Bunner from '../components/template/Bunner';
 import '../components/css/navbar.css';
 // import CarsDisplay from '../components/CarsDisplay';

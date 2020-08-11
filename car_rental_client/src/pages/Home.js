@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import Hero from '../components/template/Hero';
 import Button from '@material-ui/core/Button'
 import Bunner from '../components/template/Bunner';
 import '../components/css/navbar.css';

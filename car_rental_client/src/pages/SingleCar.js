@@ -5,7 +5,7 @@ import { FaCheck } from 'react-icons/fa'
 import Bunner from '../components/template/Bunner';
 import { CarContext } from '../context/context'
 import { Link } from 'react-router-dom';
-import StyledHero from '../components/StyledHero';
+import StyledHero from '../components/template/StyledHero';
 export default class SingleCar extends Component {
 
     static contextType = CarContext;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../components/Hero'
+import Hero from '../components/template/Hero'
 import Bunner from '../components/template/Title'
 import { Link } from 'react-router-dom'
 
