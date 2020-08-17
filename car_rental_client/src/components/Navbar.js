@@ -1,23 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../components/css/navbar.css'
 // import { FaAlignRight } from 'react-icons/fa';
-import {useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import AuthOptions from './auth-option/AuthOption'
 // import MenuIcon from '@material-ui/core/Menu';
+import UserContext from '../context/UserContext'
 
 export default function Navbar() {
+    const { userData,setUserData } = useContext(UserContext)
     const history = useHistory();
-    // const [isOpen, setIsOpen ] = useState(false);
 
-    // const handleNavToggel = () => {
-    //     setIsOpen(!isOpen);
-    //     console.log(isOpen);
-    // };
     const useStyles = makeStyles((theme) => ({
         root: {
             flexGrow: 1,
@@ -29,7 +27,14 @@ export default function Navbar() {
             flexGrow: 1,
         },
     }));
-
+    const logout = () => {
+        setUserData({
+            token: undefined,
+            user: undefined,
+        });
+        localStorage.setItem("auth-token", "");
+        history.push('/')
+    };
     const classes = useStyles();
 
     return (
@@ -42,8 +47,15 @@ export default function Navbar() {
                     <Typography variant="h6" className={classes.title}>
                         Car Rental
                 </Typography>
-                    <Button color="inherit" onClick={() => { history.push('/') }}>Home</Button>
-                    <Button color="inherit" onClick={() => { history.push('/cars') }}>Cars</Button>
+                    {
+                        userData.user ? <>
+
+                            <Button color="inherit" onClick={() => { history.push('/') }}>Home</Button>
+                            <Button color="inherit" onClick={() => { history.push('/cars') }}>Cars</Button>
+                            <button className='header-links' onClick={logout}>Logout</button>
+                        </> :
+                            <AuthOptions />
+                    }
                 </Toolbar>
             </AppBar>
         </nav>

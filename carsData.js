@@ -115,7 +115,7 @@ const cars =
        "id":"10",
        "pic":["https://cdn.pixabay.com/photo/2014/10/22/17/22/ford-498244__340.jpg"],
        "carName":"Alfa Romeo",
-       "model": "Spider4",
+       "model": "",
        "price": "900",
        "year": "2017",
        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
@@ -199,7 +199,7 @@ const cars =
        "id":"17",
        "pic":["https://cdn.pixabay.com/photo/2016/03/09/09/16/car-1245706__340.jpg"],
        "carName":"GMC",
-       "model": "G1500 Club CoupeMC",
+       "model": "G1500 ",
        "price": "1500",
        "year": "2002",
        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
@@ -290,7 +290,19 @@ const cars =
        
        "featured": false
 
-   }
+   },
+   {
+    "id":"25",
+    "pic":["https://cdn.pixabay.com/photo/2019/07/24/23/09/car-4361321__340.jpg"],
+    "carName":"Shlomi",
+    "model": "500 SL",
+    "price": "3000",
+    "year": "2020",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    
+    "featured": false
+
+}
    
 
 ]

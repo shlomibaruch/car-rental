@@ -3,6 +3,7 @@ import axios from 'axios'
 import Button from '@material-ui/core/Button'
 import '../components/css/navbar.css';
 import { useHistory, Link } from 'react-router-dom';
+import LocalStorage from '../components/LocalStorage'
 import { FcLike } from 'react-icons/fc'
 export default function Car({ car }) {
     const history = useHistory();
@@ -26,6 +27,7 @@ export default function Car({ car }) {
 
 
                     }}><Link to={`/cars/${id}`} >More Details</Link></Button>
+                    <FcLike />
 
                 </div>
             </div>
