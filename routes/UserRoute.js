@@ -2,9 +2,10 @@ const router = require('express').Router();
 const NewUser = require('../modules/NewUserModule');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const auth = require('../Auth')
+const passport = require('passport');
+const auth = require('../Auth');
 router.post('/register', async (req, res) => {
-    const {email,password} = req.body;
+    const { email, password } = req.body;
     // console.log(email,password);
     try {
 
@@ -12,7 +13,7 @@ router.post('/register', async (req, res) => {
 
         // Checks that all fields are not empty 
 
-        if (!email || !password )
+        if (!email || !password)
             return res.status(400).json({ msg: " Check that all fields are full " });
 
         // Checks the password length. If it is less than 5 returns an error message
@@ -122,4 +123,6 @@ router.get('/', auth, async (req, res) => {
 
     }
 });
+
+
 module.exports = router;

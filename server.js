@@ -3,6 +3,8 @@ const app = express();
 const cars = require('./carsData');
 const mongoose = require('mongoose')
 const PORT = process.env.PORT = 5001;
+// const passport = require('passport');
+
 const cors = require('cors')
 app.use(express.json());
 app.use(cors());
@@ -20,6 +22,7 @@ app.post('/cars/:search_car', (req, res) => {
     console.log(a);
 });
 
+
 app.listen(PORT, () => {
     console.log(`server listening on port ${PORT}`);
 });
@@ -34,4 +37,6 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING,
         if (err) throw err;
         console.log('MongoDB connection esrablished');
     });
+
 app.use('/users', require('./routes/UserRoute'));
+app.use('/oauth', require('./routes/facebookAuth'));

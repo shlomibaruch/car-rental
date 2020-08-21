@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import UserCotext from '../../context/UserContext'
+import FacebookAuth from './FacebookAuth';
 
 export default function Login() {
 
@@ -35,6 +36,7 @@ export default function Login() {
             <input type='submit' value='Login' placeholder='Your Password '/>
             
             </form>
+            <FacebookAuth />
         </div>
     )
 }

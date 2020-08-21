@@ -42,9 +42,9 @@ function App() {
     };
   }
 
-    useEffect(() => {
-      checkLoggedIn()
-    },[])
+  useEffect(() => {
+    checkLoggedIn()
+  }, [])
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ userData, setUserData, checkLoggedIn }}>
@@ -52,7 +52,7 @@ function App() {
           <Navbar />
         </div>
         <Switch>
-          <Route exact path="/" render={()=> <Home/>} />
+          <Route exact path="/" render={() => <Home />} />
           <Route exact path="/cars" component={Cars} />
           <Route path="/cars/:search_car" component={SingleCar} />
           <Route path="/register" component={Register} />
