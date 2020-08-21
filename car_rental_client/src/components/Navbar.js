@@ -44,7 +44,7 @@ export default function Navbar() {
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" >
                         {/* <FaAlignRight /> */}
                     </IconButton>
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography variant="h4" className={classes.title}>
                         Car Rental
                 </Typography>
                     {
@@ -52,7 +52,7 @@ export default function Navbar() {
 
                             <Button color="inherit" onClick={() => { history.push('/') }}>Home</Button>
                             <Button color="inherit" onClick={() => { history.push('/cars') }}>Cars</Button>
-                            <button className='header-links' onClick={logout}>Logout</button>
+                            <Button color="secondary" className='header-links' onClick={logout} >Logout</Button>
                         </> :
                             <AuthOptions />
                     }

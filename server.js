@@ -5,9 +5,9 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT = 5001;
 // const passport = require('passport');
 
-const cors = require('cors')
+// const cors = require('cors')
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 require("dotenv").config();
 app.get('/', (req, res) => {
     console.log('home');

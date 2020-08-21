@@ -8,6 +8,7 @@ import Title from './template/Title';
 export default function Footer() {
     return (
         <div className='footer-container'>
+            
             <FaFacebookSquare className='footer-contact' color='blue' fontSize='45px' />
             <AiFillInstagram className='footer-contact' color='red' fontSize='45px' />
             <AiFillGithub className='footer-contact' color='white' fontSize='45px'/>

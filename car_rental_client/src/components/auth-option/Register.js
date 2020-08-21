@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
+import { Input } from '@material-ui/core';
 
 export default function Register() {
 
@@ -35,11 +36,15 @@ export default function Register() {
         }
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Email</label><input type="email" onChange={e => setEmail(e.target.value)} />
-            <label>Password</label> <input type="password" onChange={e => setPassword(e.target.value)} />
-            <input type="submit" value="Register" />
+        <div id='auth-container'>
+            <h1>Hello Rgister</h1>
 
-        </form>
+            <form onSubmit={handleSubmit}>
+                <Input id="outlined-basic" placeholder='Your Email Account' type="email" onChange={e => setEmail(e.target.value)} />
+                <Input id="outlined-basic" placeholder='Your Password ' type="password" onChange={e => setPassword(e.target.value)} />
+                <Input id="outlined-basic" type="submit" value="Register" />
+
+            </form>
+        </div>
     )
 }
