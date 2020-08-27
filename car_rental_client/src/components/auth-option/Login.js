@@ -38,7 +38,7 @@ export default function Login() {
                 <Input id="outlined-basic" type='submit' value='Login' placeholder='Your Password ' />
 
             </form>
-            {/* <FacebookAuth /> */}
+            <FacebookAuth />
         </div>
     )
 }

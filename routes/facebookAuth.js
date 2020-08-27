@@ -30,7 +30,7 @@ passport.use('facebook', new facebookTokenStartegy({
         done(err, false, err.message)
     }
 }));
-router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+router.post('/auth/facebook', passport.authenticate('facebook', { scope: ['email'], session: false }));
 
 router.get('/auth/facebook/callback',
     passport.authenticate('facebook', {
