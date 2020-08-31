@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+app.use(express.static('public'));
 const cars = require('./carsData');
 const mongoose = require('mongoose')
 const PORT = process.env.PORT = 5001;
-// const passport = require('passport');
+// const passport = require('passport');ש
 
 // const cors = require('cors')
 app.use(express.json());
