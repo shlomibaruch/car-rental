@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "car_rental_client": "cd car_rental_client && npm start",
-    "dev": "concurrently -n 'server,car_rental_client' \"nodemon server.js\" \"npm run car_rental_client\""
+    "dev": "concurrently -n 'server,car_rental_client' \"nodemon server.js\" \"npm run car_rental_client\"",
+    "heroku-postbuild": "cd car_rental_client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "shlomi",
   "license": "ISC",

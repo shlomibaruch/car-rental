@@ -20,14 +20,22 @@ app.get('/cars', (req, res) => {
 
 app.post('/cars/:search_car', (req, res) => {
     let a = req.params.search_car;
-    
+
 });
 
 
 app.listen(PORT, () => {
     console.log(`server listening on port ${PORT}`);
 });
-
+const path = require('path');
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'car_rental_client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'car_rental_client/build', 'index.html'));
+  });
+}
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING,
     {
         useNewUrlParser: true,
