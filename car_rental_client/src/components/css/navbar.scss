@@ -185,8 +185,7 @@
          }
 
 
-             .featured_room_center { 
-             height: 80vh;
+             .featured_car_center { 
              display: flex;
              justify-content: space-evenly; 
               }
@@ -240,7 +239,7 @@
 }
 
 .homeBanner { 
-    height:50vh;
+    height:35vh;
     display:flex;
     align-items:center;
     flex-direction: column;
@@ -252,7 +251,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         // .footer-contact {
@@ -267,6 +266,7 @@
        display: flex;
        flex-direction: column;
        justify-content: center;
+       height: 100vh;
        form, h1{ 
         margin-bottom: 5px;
         display: inherit;
@@ -281,4 +281,23 @@
        }
     
       
+    }
+
+    .landing-container {
+        // display: flex;
+    height: calc(100vh - 3px);
+    width: 100%;
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+    h1{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+     }
+       
     }

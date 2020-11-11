@@ -19,40 +19,40 @@ function App() {
     token: undefined,
     user: undefined
   });
-  const checkLoggedIn = async () => {
-    console.log(userData);
-    let token = localStorage.getItem("auth-token");
-    if (token === null) {
-      localStorage.setItem("auth-token", "");
-      token = '';
-    };
 
-    const tokenRes = await axios.post(
-      "http://localhost:3000/users/tokenIsValid", null, { headers: { "x-auth-token": token } }
-
-    );
-
-    if (tokenRes.data) {
-
-      const userRes = await axios.get("http://localhost:3000/users/", { headers: { "x-auth-token": token }, });
-      setUserData({
-        token,
-        user: userRes.data,
-      });
-    };
-  }
 
   useEffect(() => {
+    const checkLoggedIn = async () => {
+      let token = localStorage.getItem("auth-token");
+      if (token === null) {
+        localStorage.setItem("auth-token", "");
+        token = '';
+      };
+
+      const tokenRes = await axios.post(
+        "http://localhost:3000/users/tokenIsValid", null, { headers: { "x-auth-token": token } }
+
+      );
+
+      if (tokenRes.data) {
+
+        const userRes = await axios.get("http://localhost:3000/users/", { headers: { "x-auth-token": token }, });
+        setUserData({
+          token,
+          user: userRes.data,
+        });
+      };
+    }
     checkLoggedIn()
   }, [])
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ userData, setUserData, checkLoggedIn }}>
+      <UserContext.Provider value={{ userData, setUserData }}>
         <div className="App">
           <Navbar />
         </div>
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/"  component={Home}/>
           <Route exact path="/cars" component={Cars} />
           <Route path="/cars/:search_car" component={SingleCar} />
           <Route path="/register" component={Register} />
@@ -60,8 +60,8 @@ function App() {
           <Route component={ErrorPage} />
 
         </Switch>
-        <Footer />
       </UserContext.Provider>
+      <Footer />
     </BrowserRouter>
   );
 }

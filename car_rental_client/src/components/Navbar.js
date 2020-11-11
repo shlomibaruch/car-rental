@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import '../components/css/navbar.css'
 // import { FaAlignRight } from 'react-icons/fa';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -13,7 +13,7 @@ import AuthOptions from './auth-option/AuthOption'
 import UserContext from '../context/UserContext'
 
 export default function Navbar() {
-    const { userData,setUserData } = useContext(UserContext)
+    const { userData, setUserData } = useContext(UserContext)
     const history = useHistory();
 
     const useStyles = makeStyles((theme) => ({
@@ -25,6 +25,9 @@ export default function Navbar() {
         },
         title: {
             flexGrow: 1,
+            fontSize: '35px',
+            color: 'white',
+            textDecoration: 'none'
         },
     }));
     const logout = () => {
@@ -39,14 +42,14 @@ export default function Navbar() {
 
     return (
         <nav className={classes.root}>
-            <AppBar position="static" style={{ backgroundColor: 'black' }}>
+            <AppBar position="fixed" style={{ backgroundColor: 'black' }}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" >
                         {/* <FaAlignRight /> */}
                     </IconButton>
-                    <Typography variant="h4" className={classes.title}>
+                    <Link to='/' className={classes.title}>
                         Car Rental
-                </Typography>
+                </Link>
                     {
                         userData.user ? <>
 

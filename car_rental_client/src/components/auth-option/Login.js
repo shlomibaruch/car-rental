@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Input } from '@material-ui/core';
 import '../css/navbar.css'
 import UserCotext from '../../context/UserContext'
-import FacebookAuth from './FacebookAuth';
+// import FacebookAuth from './FacebookAuth';
 
 export default function Login() {
 
@@ -31,14 +31,14 @@ export default function Login() {
     }
     return (
         <div id='auth-container'>
-            <h1>Hello login</h1>
+            <h1>Login</h1>
             <form onSubmit={handelSubmit}>
                 <Input id="outlined-basic" type='email' placeholder='Your Email Account' onChange={e => setEmail(e.target.value)} />
                 <Input id="outlined-basic" type='password' placeholder='Your Password ' onChange={e => setPassword(e.target.value)} />
                 <Input id="outlined-basic" type='submit' value='Login' placeholder='Your Password ' />
 
             </form>
-            <FacebookAuth />
+            {/* <FacebookAuth /> */}
         </div>
     )
 }

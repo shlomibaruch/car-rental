@@ -6,8 +6,7 @@ import './css/navbar.css'
 import Car from './Car';
 export default class FeaturedCars extends Component {
     static contextType = CarContext;
-
-
+    
     render() {
 
         let { loading, featuredCars: cars } = this.context;
@@ -26,14 +25,14 @@ export default class FeaturedCars extends Component {
                 <div style={{ textAlign: 'center' }}>
                     <Title title="featured Cars" />
                 </div>
-                <div className='featured_room_center'>
+                <div className='featured_car_center'>
                     {/* {cars} */}
                     {loading ? <Loading /> : cars}
                 </div>
 
                 {/* <Car/> */}
 
-            </section >
+             </section >
         )
     }
 }

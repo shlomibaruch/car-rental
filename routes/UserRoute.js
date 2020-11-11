@@ -114,7 +114,6 @@ router.post("/tokenIsValid", async (req, res) => {
 router.get('/', auth, async (req, res) => {
     try {
         const user = await NewUser.NewUser.findById(req.user);
-        console.log('user',user);
         res.json({
             email: user.email,
             id: user._id

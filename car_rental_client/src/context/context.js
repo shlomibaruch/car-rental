@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-const carsData = require('../data.json');
 const CarContext = React.createContext();
 
 class CarProvider extends Component {

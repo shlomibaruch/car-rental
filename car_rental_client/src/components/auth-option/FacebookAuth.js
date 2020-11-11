@@ -4,10 +4,11 @@ import axios from 'axios';
 
 
 export default function FacebookAuth() {
-    const [userToken, setUserToken] = useState();
-    const login = () => {
-        console.log(userToken);
-    };
+    // const [userToken] = useState();
+
+    // const login = () => {
+    //     console.log(userToken);
+    // };
     const responseFacebook = (res) => {
         let resToken = res.accessToken;
         console.log(resToken);
@@ -21,7 +22,7 @@ export default function FacebookAuth() {
                     appId='697706900780728'
                     autoLoad={false}
                     fields="name,email,picture"
-                    onClick={login}
+                    // onClick={login}
                     callback={responseFacebook}
                 />
             </div>

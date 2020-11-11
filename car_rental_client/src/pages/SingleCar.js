@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../components/css/navbar.css';
 import Button from '@material-ui/core/Button'
-import { FaCheck } from 'react-icons/fa'
 import Bunner from '../components/template/Bunner';
 import { CarContext } from '../context/context'
 import { Link } from 'react-router-dom';
@@ -34,7 +33,7 @@ export default class SingleCar extends Component {
                 </Link>
             </div>
         };
-        const { carName, model, price, year, featured, pic, description } = car;
+        const { carName, model, price, year, pic, description } = car;
         return (
             <>
                 <StyledHero img={pic[this.state.carGallery] || 'https://cdn.pixabay.com/photo/2013/07/13/11/44/car-158548__340.png'}>

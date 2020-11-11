@@ -8,7 +8,7 @@ export default function Register() {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const [error, setError] = useState();
+    const [setError] = useState();
     const history = useHistory();
     const { setUserData } = useContext(UserContext);
     const handleSubmit = async (e) => {
@@ -37,7 +37,7 @@ export default function Register() {
     }
     return (
         <div id='auth-container'>
-            <h1>Hello Rgister</h1>
+            <h1>Rgister</h1>
 
             <form onSubmit={handleSubmit}>
                 <Input id="outlined-basic" placeholder='Your Email Account' type="email" onChange={e => setEmail(e.target.value)} />

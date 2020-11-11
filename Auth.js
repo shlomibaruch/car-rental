@@ -9,8 +9,6 @@ const auth = (req, res, next) => {
 
         if (!verified)
             return res.status(401).json({ msg: 'Token verified faild, authorization denid' });
-        console.log('verified', verified);
-        console.log('token', token);
         req.user = verified.id;
         next()
     } catch (err) {

@@ -259,8 +259,7 @@
   background-color: red;
 }
 
-.featured_room_center {
-  height: 80vh;
+.featured_car_center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +341,7 @@
 }
 
 .homeBanner {
-  height: 50vh;
+  height: 35vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +369,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -391,6 +390,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100vh;
 }
 
 #auth-container form, #auth-container h1 {
@@ -411,5 +411,25 @@
 
 #auth-container form input[type='submit'], #auth-container h1 input[type='submit'] {
   cursor: pointer;
+}
+
+.landing-container {
+  height: calc(100vh - 3px);
+  width: 100%;
+}
+
+.landing-container video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.landing-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
 }
 /*# sourceMappingURL=navbar.css.map */

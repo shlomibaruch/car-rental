@@ -89,7 +89,7 @@ const cars =
    },
    {
        "id":"8",
-       "pic":["https://cdn.pixabay.com/photo/2012/11/02/13/02/ford-63930__340.jpg"],
+       "pic":["https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278__340.jpg"],
        "carName":"lada",
        "model": "12",
        "price": "800",
