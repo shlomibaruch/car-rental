@@ -1,0 +1,23 @@
+{
+  "name": "car-rental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && npm install && node server.js",
+    "car_rental_client-install": "cd car_rental_client && npm install",
+    "react-bulild":"cd car_rental_client && npm run build",
+    "heroku-postbuild": "npm run car_rental_client-install && npm run react-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlomibaruch/car-rental.git"
+  },
+  "author": "shlomi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shlomibaruch/car-rental/issues"
+  },
+  "homepage": "https://github.com/shlomibaruch/car-rental#readme"
+}
