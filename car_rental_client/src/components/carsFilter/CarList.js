@@ -7,7 +7,7 @@ export default function CarList({ cars }) {
     const [currentPage, setCurrentPage] = useState(1);
     const [carsPerPage] = useState(9);
     const indexOfLastcCars = currentPage * carsPerPage;
-    const indexOfFirstCars = indexOfLastcCars - carsPerPage ;
+    const indexOfFirstCars = indexOfLastcCars - carsPerPage;
     const currentCars = cars.slice(indexOfFirstCars, indexOfLastcCars);
 
     const paginate = (pageNumber) => {
@@ -21,14 +21,14 @@ export default function CarList({ cars }) {
     }
     return (
         <>
-        <div className="cardContainer">
+            <div className="cardContainer">
 
-            {currentCars.map((item) => {
+                {currentCars.map((item) => {
 
-                return <Car key={item.id} car={item} />
+                    return <Car key={item.id} car={item} />
 
-            })}
-        </div>
+                })}
+            </div>
             <Pagination
                 carPerPage={carsPerPage}
                 totalCars={cars.length}

@@ -52,8 +52,8 @@ function App() {
           <Navbar />
         </div>
         <Switch>
-          <Route exact path="/"  component={Home}/>
-          <Route exact path="/cars" component={Cars} />
+          <Route exact path="/" render={(props) => (<Home {...props} />)} />
+          <Route path="/cars" component={Cars} />
           <Route path="/cars/:search_car" component={SingleCar} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
